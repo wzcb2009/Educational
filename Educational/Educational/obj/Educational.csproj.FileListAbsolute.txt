@@ -1,0 +1,12 @@
+E:\work\Educational\Educational\obj\Debug\ResolveAssemblyReference.cache
+E:\work\Educational\Educational\obj\Debug\Educational.Properties.Resources.resources
+E:\work\Educational\Educational\obj\Debug\Educational.csproj.GenerateResource.Cache
+E:\work\Educational\Educational\bin\Debug\Educational.exe
+E:\work\Educational\Educational\bin\Debug\Educational.pdb
+E:\work\Educational\Educational\obj\Debug\Educational.exe
+E:\work\Educational\Educational\obj\Debug\Educational.pdb
+E:\work\Educational\Educational\obj\Debug\Educational.Forms.ScoreReport_Form.resources
+E:\work\Educational\Educational\obj\Debug\Educational.Main_Form.resources
+E:\work\Educational\Educational\obj\Debug\Educational.Forms.StudentScore_Form.resources
+E:\work\Educational\Educational\obj\Debug\Educational.exe.licenses
+E:\work\Educational\Educational\obj\Debug\Educational.Forms.CreateScoreRecord_Form.resources
