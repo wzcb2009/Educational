@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox ScoreRecord_productlevel;
+            this.ScoreRecord_productlevel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -90,6 +90,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.studentinfo_label = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -267,7 +268,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ScoreRecord_specialtyelectivegrade = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
-            ScoreRecord_productlevel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -286,12 +286,12 @@
             // 
             // ScoreRecord_productlevel
             // 
-            ScoreRecord_productlevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            ScoreRecord_productlevel.Location = new System.Drawing.Point(314, 230);
-            ScoreRecord_productlevel.Margin = new System.Windows.Forms.Padding(0);
-            ScoreRecord_productlevel.Name = "ScoreRecord_productlevel";
-            ScoreRecord_productlevel.Size = new System.Drawing.Size(84, 21);
-            ScoreRecord_productlevel.TabIndex = 145;
+            this.ScoreRecord_productlevel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ScoreRecord_productlevel.Location = new System.Drawing.Point(310, 230);
+            this.ScoreRecord_productlevel.Margin = new System.Windows.Forms.Padding(0);
+            this.ScoreRecord_productlevel.Name = "ScoreRecord_productlevel";
+            this.ScoreRecord_productlevel.Size = new System.Drawing.Size(88, 21);
+            this.ScoreRecord_productlevel.TabIndex = 145;
             // 
             // tableLayoutPanel1
             // 
@@ -983,6 +983,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button_Save);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -992,9 +993,19 @@
             this.panel5.Size = new System.Drawing.Size(374, 70);
             this.panel5.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(150, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "打印";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(257, 28);
+            this.button2.Location = new System.Drawing.Point(257, 23);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -1004,7 +1015,7 @@
             // 
             // button_Save
             // 
-            this.button_Save.Location = new System.Drawing.Point(55, 27);
+            this.button_Save.Location = new System.Drawing.Point(46, 23);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(75, 23);
             this.button_Save.TabIndex = 0;
@@ -1019,8 +1030,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tableLayoutPanel2.Controls.Add(ScoreRecord_productlevel, 3, 10);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel2.Controls.Add(this.ScoreRecord_productlevel, 3, 10);
             this.tableLayoutPanel2.Controls.Add(this.ScoreRecord_classjob, 1, 10);
             this.tableLayoutPanel2.Controls.Add(this.honors_Awarddep_8, 3, 9);
             this.tableLayoutPanel2.Controls.Add(this.honors_Awardname_8, 1, 9);
@@ -1089,16 +1100,16 @@
             this.ScoreRecord_classjob.Location = new System.Drawing.Point(74, 230);
             this.ScoreRecord_classjob.Margin = new System.Windows.Forms.Padding(0);
             this.ScoreRecord_classjob.Name = "ScoreRecord_classjob";
-            this.ScoreRecord_classjob.Size = new System.Drawing.Size(118, 21);
+            this.ScoreRecord_classjob.Size = new System.Drawing.Size(116, 21);
             this.ScoreRecord_classjob.TabIndex = 144;
             // 
             // honors_Awarddep_8
             // 
             this.honors_Awarddep_8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_8.Location = new System.Drawing.Point(314, 207);
+            this.honors_Awarddep_8.Location = new System.Drawing.Point(310, 207);
             this.honors_Awarddep_8.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_8.Name = "honors_Awarddep_8";
-            this.honors_Awarddep_8.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_8.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_8.TabIndex = 143;
             // 
             // honors_Awardname_8
@@ -1108,7 +1119,7 @@
             this.honors_Awardname_8.Location = new System.Drawing.Point(74, 207);
             this.honors_Awardname_8.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_8.Name = "honors_Awardname_8";
-            this.honors_Awardname_8.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_8.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_8.TabIndex = 141;
             // 
             // honors_Awarddate_8
@@ -1123,10 +1134,10 @@
             // honors_Awarddep_7
             // 
             this.honors_Awarddep_7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_7.Location = new System.Drawing.Point(314, 184);
+            this.honors_Awarddep_7.Location = new System.Drawing.Point(310, 184);
             this.honors_Awarddep_7.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_7.Name = "honors_Awarddep_7";
-            this.honors_Awarddep_7.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_7.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_7.TabIndex = 139;
             // 
             // honors_Awardname_7
@@ -1136,7 +1147,7 @@
             this.honors_Awardname_7.Location = new System.Drawing.Point(74, 184);
             this.honors_Awardname_7.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_7.Name = "honors_Awardname_7";
-            this.honors_Awardname_7.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_7.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_7.TabIndex = 137;
             // 
             // honors_Awarddate_7
@@ -1151,10 +1162,10 @@
             // honors_Awarddep_6
             // 
             this.honors_Awarddep_6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_6.Location = new System.Drawing.Point(314, 161);
+            this.honors_Awarddep_6.Location = new System.Drawing.Point(310, 161);
             this.honors_Awarddep_6.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_6.Name = "honors_Awarddep_6";
-            this.honors_Awarddep_6.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_6.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_6.TabIndex = 135;
             // 
             // honors_Awardname_6
@@ -1164,7 +1175,7 @@
             this.honors_Awardname_6.Location = new System.Drawing.Point(74, 161);
             this.honors_Awardname_6.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_6.Name = "honors_Awardname_6";
-            this.honors_Awardname_6.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_6.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_6.TabIndex = 133;
             // 
             // honors_Awarddate_6
@@ -1179,10 +1190,10 @@
             // honors_Awarddep_5
             // 
             this.honors_Awarddep_5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_5.Location = new System.Drawing.Point(314, 138);
+            this.honors_Awarddep_5.Location = new System.Drawing.Point(310, 138);
             this.honors_Awarddep_5.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_5.Name = "honors_Awarddep_5";
-            this.honors_Awarddep_5.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_5.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_5.TabIndex = 131;
             // 
             // honors_Awardname_5
@@ -1192,7 +1203,7 @@
             this.honors_Awardname_5.Location = new System.Drawing.Point(74, 138);
             this.honors_Awardname_5.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_5.Name = "honors_Awardname_5";
-            this.honors_Awardname_5.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_5.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_5.TabIndex = 129;
             // 
             // honors_Awarddate_5
@@ -1207,10 +1218,10 @@
             // honors_Awarddep_4
             // 
             this.honors_Awarddep_4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_4.Location = new System.Drawing.Point(314, 115);
+            this.honors_Awarddep_4.Location = new System.Drawing.Point(310, 115);
             this.honors_Awarddep_4.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_4.Name = "honors_Awarddep_4";
-            this.honors_Awarddep_4.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_4.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_4.TabIndex = 127;
             // 
             // honors_Awardname_4
@@ -1220,7 +1231,7 @@
             this.honors_Awardname_4.Location = new System.Drawing.Point(74, 115);
             this.honors_Awardname_4.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_4.Name = "honors_Awardname_4";
-            this.honors_Awardname_4.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_4.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_4.TabIndex = 125;
             // 
             // honors_Awarddate_4
@@ -1235,10 +1246,10 @@
             // honors_Awarddep_3
             // 
             this.honors_Awarddep_3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_3.Location = new System.Drawing.Point(314, 92);
+            this.honors_Awarddep_3.Location = new System.Drawing.Point(310, 92);
             this.honors_Awarddep_3.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_3.Name = "honors_Awarddep_3";
-            this.honors_Awarddep_3.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_3.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_3.TabIndex = 123;
             // 
             // honors_Awardname_3
@@ -1248,7 +1259,7 @@
             this.honors_Awardname_3.Location = new System.Drawing.Point(74, 92);
             this.honors_Awardname_3.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_3.Name = "honors_Awardname_3";
-            this.honors_Awardname_3.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_3.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_3.TabIndex = 121;
             // 
             // honors_Awarddate_3
@@ -1263,10 +1274,10 @@
             // honors_Awarddep_2
             // 
             this.honors_Awarddep_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_2.Location = new System.Drawing.Point(314, 69);
+            this.honors_Awarddep_2.Location = new System.Drawing.Point(310, 69);
             this.honors_Awarddep_2.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_2.Name = "honors_Awarddep_2";
-            this.honors_Awarddep_2.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_2.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_2.TabIndex = 119;
             // 
             // honors_Awardname_2
@@ -1276,7 +1287,7 @@
             this.honors_Awardname_2.Location = new System.Drawing.Point(74, 69);
             this.honors_Awardname_2.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_2.Name = "honors_Awardname_2";
-            this.honors_Awardname_2.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_2.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_2.TabIndex = 117;
             // 
             // honors_Awarddate_2
@@ -1291,10 +1302,10 @@
             // honors_Awarddep_1
             // 
             this.honors_Awarddep_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.honors_Awarddep_1.Location = new System.Drawing.Point(314, 46);
+            this.honors_Awarddep_1.Location = new System.Drawing.Point(310, 46);
             this.honors_Awarddep_1.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awarddep_1.Name = "honors_Awarddep_1";
-            this.honors_Awarddep_1.Size = new System.Drawing.Size(84, 21);
+            this.honors_Awarddep_1.Size = new System.Drawing.Size(88, 21);
             this.honors_Awarddep_1.TabIndex = 115;
             // 
             // honors_Awardname_1
@@ -1304,7 +1315,7 @@
             this.honors_Awardname_1.Location = new System.Drawing.Point(74, 46);
             this.honors_Awardname_1.Margin = new System.Windows.Forms.Padding(0);
             this.honors_Awardname_1.Name = "honors_Awardname_1";
-            this.honors_Awardname_1.Size = new System.Drawing.Size(238, 21);
+            this.honors_Awardname_1.Size = new System.Drawing.Size(234, 21);
             this.honors_Awardname_1.TabIndex = 114;
             // 
             // honors_Awarddate_1
@@ -1334,10 +1345,10 @@
             this.label25.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label25, 2);
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(194, 276);
+            this.label25.Location = new System.Drawing.Point(192, 276);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(204, 21);
+            this.label25.Size = new System.Drawing.Size(206, 21);
             this.label25.TabIndex = 100;
             this.label25.Text = "家长寄语：";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1350,7 +1361,7 @@
             this.label30.Location = new System.Drawing.Point(2, 276);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(190, 21);
+            this.label30.Size = new System.Drawing.Size(188, 21);
             this.label30.TabIndex = 92;
             this.label30.Text = "自我评价：";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1371,10 +1382,10 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(194, 230);
+            this.label36.Location = new System.Drawing.Point(192, 230);
             this.label36.Margin = new System.Windows.Forms.Padding(0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(118, 21);
+            this.label36.Size = new System.Drawing.Size(116, 21);
             this.label36.TabIndex = 76;
             this.label36.Text = "品能等级(达标等级)";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1408,10 +1419,10 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label69.Location = new System.Drawing.Point(314, 24);
+            this.label69.Location = new System.Drawing.Point(310, 24);
             this.label69.Margin = new System.Windows.Forms.Padding(0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(84, 20);
+            this.label69.Size = new System.Drawing.Size(88, 20);
             this.label69.TabIndex = 2;
             this.label69.Text = "颁奖部门";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1423,7 +1434,7 @@
             this.label71.Location = new System.Drawing.Point(74, 24);
             this.label71.Margin = new System.Windows.Forms.Padding(0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(238, 20);
+            this.label71.Size = new System.Drawing.Size(234, 20);
             this.label71.TabIndex = 5;
             this.label71.Text = "奖项名称";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1492,10 +1503,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.ScoreRecord_parenthope, 2);
             this.ScoreRecord_parenthope.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScoreRecord_parenthope.Location = new System.Drawing.Point(194, 299);
+            this.ScoreRecord_parenthope.Location = new System.Drawing.Point(192, 299);
             this.ScoreRecord_parenthope.Margin = new System.Windows.Forms.Padding(0);
             this.ScoreRecord_parenthope.Name = "ScoreRecord_parenthope";
-            this.ScoreRecord_parenthope.Size = new System.Drawing.Size(204, 170);
+            this.ScoreRecord_parenthope.Size = new System.Drawing.Size(206, 170);
             this.ScoreRecord_parenthope.TabIndex = 110;
             this.ScoreRecord_parenthope.Text = "";
             // 
@@ -1506,7 +1517,7 @@
             this.ScoreRecord_myevaluate.Location = new System.Drawing.Point(2, 299);
             this.ScoreRecord_myevaluate.Margin = new System.Windows.Forms.Padding(0);
             this.ScoreRecord_myevaluate.Name = "ScoreRecord_myevaluate";
-            this.ScoreRecord_myevaluate.Size = new System.Drawing.Size(190, 170);
+            this.ScoreRecord_myevaluate.Size = new System.Drawing.Size(188, 170);
             this.ScoreRecord_myevaluate.TabIndex = 111;
             this.ScoreRecord_myevaluate.Text = "";
             // 
@@ -3102,7 +3113,7 @@
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(122, 20);
             this.label96.TabIndex = 96;
-            this.label96.Text = "地方课程";
+            this.label96.Text = "综合素养";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label92
@@ -3907,5 +3918,7 @@
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label studentinfo_label;
+        private System.Windows.Forms.TextBox ScoreRecord_productlevel;
+        private System.Windows.Forms.Button button1;
     }
 }

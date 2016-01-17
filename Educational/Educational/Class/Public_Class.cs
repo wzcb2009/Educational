@@ -8,6 +8,7 @@ namespace Educational.Class
 {
     public class Public_Class
     {
+        public static string dir = "";
     }
     #region TextBoxList
     public class TextBoxList

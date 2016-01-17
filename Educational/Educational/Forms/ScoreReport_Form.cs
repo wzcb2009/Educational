@@ -309,11 +309,19 @@ namespace Educational.Forms
                 item.Save();
             }
             #endregion
+
+            FillInputByClass();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Print_Class.PrintReport(CurRecordClass.ID, 1);
+           
         }
 
     }

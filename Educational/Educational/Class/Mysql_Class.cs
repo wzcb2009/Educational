@@ -8,19 +8,127 @@ namespace Educational.Class
 {
     public class Mysql_Class
     {
-        #region  建立MySql数据库连接
-        /// <summary>
-        /// 建立数据库连接.
-        /// </summary>
-        /// <returns>返回MySqlConnection对象</returns>
-        public MySqlConnection getmysqlcon()
+        private string sqlconnStr = "";
+        private static MySqlConnection SqlConn;
+        public Mysql_Class(string p_database)
         {
-            String mysqlStr = "Database=test;Data Source=127.0.0.1;User Id=root;Password=root;pooling=false;CharSet=utf8;port=3306";
-            // String mySqlCon = ConfigurationManager.ConnectionStrings["MySqlCon"].ConnectionString;
-            MySqlConnection myCon = new MySqlConnection(mysqlStr);
-            return myCon;
+            sqlconnStr = "Database=" + p_database + ";Data Source=112.16.5.165;User Id=root;Password=star1022;pooling=false;CharSet=utf8;port=18088";
+            Open();
         }
-        #endregion
+        private void Open()
+        {
+
+            try
+            {
+                if (SqlConn == null)
+                {
+                    SqlConn = new MySqlConnection(sqlconnStr);
+                }
+                else if (SqlConn.State == System.Data.ConnectionState.Open)
+                {
+                    return;
+
+                }
+
+                SqlConn.Open();
+            }
+            catch (Exception ex)
+            {
+                //string str4 = sqlconnStr + "\r\n" + ex.Message;
+                //flog_Class.WriteFlog(str4);
+            }
+        }
+
+        public DataTable GetDataTable(string strSQL, List<Parameter> Pars)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+
+                Open();
+                MySqlCommand sqlCand = new MySqlCommand(strSQL, SqlConn);
+
+                if ((Pars != null) && (Pars.Count > 0))
+                {
+                    foreach (Parameter par in Pars)
+                    {
+                        MySqlParameter spar = new MySqlParameter();
+                        spar.Value = par.pvalues;
+                        spar.ParameterName = par.pname;
+                        sqlCand.Parameters.Add(spar);
+                    }
+
+                }
+
+                MySqlDataAdapter sqlda = new MySqlDataAdapter(sqlCand);
+                sqlCand.ExecuteNonQuery();
+                sqlda.Fill(dt);
+
+                sqlCand.Cancel();
+            }
+            catch (Exception ex)
+            {
+                //  flog_Class.WriteFlog(strSQL + "\r\n" + ex.Message);
+            }
+            //   Close();
+            try
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    dt.Columns[i].ColumnName = dt.Columns[i].ColumnName.ToLower().Trim();
+                }
+            }
+            catch (Exception ex)
+            {
+                //string str4 = strSQL + "\r\n" + ex.Message;
+                //flog_Class.WriteFlog(str4);
+            }
+            return dt;
+        }
+
+        public bool ExecuteSQL(string strSQL, List<Parameter> Pars)
+        {
+            int count = -1;
+            try
+            {
+                Open();
+
+                MySqlCommand sqlCand = new MySqlCommand(strSQL, SqlConn);
+                if ((Pars != null) && (Pars.Count > 0))
+                {
+                    foreach (Parameter par in Pars)
+                    {
+                        MySqlParameter spar = new MySqlParameter();
+                        spar.Value = par.pvalues;
+                        spar.ParameterName = par.pname;
+                        sqlCand.Parameters.Add(spar);
+                    }
+                }
+                count = sqlCand.ExecuteNonQuery();
+                sqlCand.Cancel();
+            }
+            catch (Exception ex)
+            {
+                //string str4 = strSQL + "\r\n" + ex.Message;
+                //flog_Class.WriteFlog(str4);
+            }
+            Close();
+            if (count > 0)
+                return true;
+            else
+                return false;
+        }
+
+
+        private void Close()
+        {
+            if (SqlConn != null)
+            {
+                SqlConn.Close();
+                SqlConn = null;
+            }
+        }
+
 
         #region  执行MySqlCommand命令
         /// <summary>
@@ -29,7 +137,7 @@ namespace Educational.Class
         /// <param name="M_str_sqlstr">SQL语句</param>
         public void getmysqlcom(string M_str_sqlstr)
         {
-            MySqlConnection mysqlcon = this.getmysqlcon();
+            MySqlConnection mysqlcon = SqlConn; 
             mysqlcon.Open();
             MySqlCommand mysqlcom = new MySqlCommand(M_str_sqlstr, mysqlcon);
             mysqlcom.ExecuteNonQuery();
@@ -47,7 +155,7 @@ namespace Educational.Class
         /// <returns>返回MySqlDataReader对象</returns>
         public MySqlDataReader getmysqlread(string M_str_sqlstr)
         {
-            MySqlConnection mysqlcon = this.getmysqlcon();
+            MySqlConnection mysqlcon = SqlConn; 
             MySqlCommand mysqlcom = new MySqlCommand(M_str_sqlstr, mysqlcon);
             mysqlcon.Open();
             MySqlDataReader mysqlread = mysqlcom.ExecuteReader(CommandBehavior.CloseConnection);

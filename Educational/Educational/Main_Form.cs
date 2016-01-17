@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Educational.Forms;
+using Educational.Class;
 
 namespace Educational
 {
@@ -18,8 +19,9 @@ namespace Educational
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
+            Public_Class.dir = Application.StartupPath;
             StudentScore_Form d_form = new StudentScore_Form();
-           // d_form.IsMdiChild = true;
+            // d_form.IsMdiChild = true;
             d_form.MdiParent = this;
             d_form.Show();
         }
@@ -30,6 +32,20 @@ namespace Educational
             d_form.MdiParent = this;
             d_form.Show();
 
+        }
+
+        private void 工资查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Teacher_Salary_Form d_form = new Teacher_Salary_Form();
+            d_form.MdiParent = this;
+            d_form.Show();
+        }
+
+        private void 阅卷系统同步ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Score_Sync_Form d_form = new Score_Sync_Form();
+            d_form.MdiParent = this;
+            d_form.Show();
         }
     }
 }

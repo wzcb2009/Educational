@@ -31,13 +31,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.导入数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导入学期记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.工资查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.成绩管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.阅卷系统同步ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导入数据ToolStripMenuItem});
+            this.导入数据ToolStripMenuItem,
+            this.工资查询ToolStripMenuItem,
+            this.成绩管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(682, 25);
@@ -55,9 +60,31 @@
             // 导入学期记录ToolStripMenuItem
             // 
             this.导入学期记录ToolStripMenuItem.Name = "导入学期记录ToolStripMenuItem";
-            this.导入学期记录ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.导入学期记录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.导入学期记录ToolStripMenuItem.Text = "导入学期记录";
             this.导入学期记录ToolStripMenuItem.Click += new System.EventHandler(this.导入学期记录ToolStripMenuItem_Click);
+            // 
+            // 工资查询ToolStripMenuItem
+            // 
+            this.工资查询ToolStripMenuItem.Name = "工资查询ToolStripMenuItem";
+            this.工资查询ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.工资查询ToolStripMenuItem.Text = "工资查询";
+            this.工资查询ToolStripMenuItem.Click += new System.EventHandler(this.工资查询ToolStripMenuItem_Click);
+            // 
+            // 成绩管理ToolStripMenuItem
+            // 
+            this.成绩管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.阅卷系统同步ToolStripMenuItem});
+            this.成绩管理ToolStripMenuItem.Name = "成绩管理ToolStripMenuItem";
+            this.成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.成绩管理ToolStripMenuItem.Text = "成绩管理";
+            // 
+            // 阅卷系统同步ToolStripMenuItem
+            // 
+            this.阅卷系统同步ToolStripMenuItem.Name = "阅卷系统同步ToolStripMenuItem";
+            this.阅卷系统同步ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.阅卷系统同步ToolStripMenuItem.Text = "阅卷系统同步";
+            this.阅卷系统同步ToolStripMenuItem.Click += new System.EventHandler(this.阅卷系统同步ToolStripMenuItem_Click);
             // 
             // Main_Form
             // 
@@ -85,5 +112,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 导入数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导入学期记录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 工资查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 成绩管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 阅卷系统同步ToolStripMenuItem;
     }
 }

@@ -302,7 +302,7 @@ namespace Educational.Class
             SqlStr += "  Modifydate = @modifydate, ";
             SqlStr += "  Remarks = @remarks, ";
             SqlStr += "  info = @info, ";
-            SqlStr += "  Recordstate = @recordstate, ";
+            SqlStr += "  Recordstatus = @Recordstatus, ";
             SqlStr += "  Printstatus = @printstatus, ";
             SqlStr += "  Printdate = @printdate, ";
             SqlStr += "  Printperson = @printperson, ";
